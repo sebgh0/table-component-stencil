@@ -1,74 +1,88 @@
 :host {
+  display: block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border-radius: 1rem; /* Bordes redondeados para la tabla */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidad */
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 2px solid #e0e0e0;
+  transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+th {
+  background-color: #ffa162; /* Color de fondo para las cabeceras */
+  color: #fff; /* Texto blanco para contraste */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:hover {
+  background-color: #ffe4d4; /* Color de fondo suave en hover */
+}
+
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.5rem; /* Bordes redondeados */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra  */
+}
+
+.loading, .no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  font-size: 1.1rem; /* Tamaño de fuente aumentado para legibilidad */
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
     display: block;
-    font-family: Arial, sans-serif;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
-  
-  th, td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+
+  tr {
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem; /* Bordes redondeados en modo móvil */
+    overflow: hidden;
   }
-  
-  th {
-    background-color: #f5f5f5;
+
+  td {
+    border: 1px solid #e0e0e0; /* Bordes en las celdas en modo móvil */
+    position: relative;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    font-size: 0.9rem; /* Tamaño de fuente ajustado para móvil */
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding: 0.5rem;
+    white-space: nowrap;
     font-weight: bold;
-    text-transform: uppercase;
+    color: #ff6600; 
+    background-color: #f5f5f5; 
+    border-right: 1px solid #e0e0e0; 
   }
-  
-  tr:hover {
-    background-color: #7abeff;
-  }
-  
-  .error {
-    color: #721c24;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    border-radius: 0.25rem;
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 1rem;
-  }
-  
-  .loading, .no-data {
-    text-align: center;
-    padding: 2rem;
-    color: #6c757d;
-  }
-  
-  @media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
-  
-    thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-  
-    tr {
-      border: 1px solid #ccc;
-      margin-bottom: 0.5rem;
-    }
-  
-    td {
-      border: none;
-      position: relative;
-      padding-left: 50%;
-    }
-  
-    td:before {
-      content: attr(data-label);
-      position: absolute;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      font-weight: bold;
-    }
-  }
+}

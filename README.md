@@ -1,7 +1,7 @@
 # table-component-stencil
 Componente Web en Stencil para renderizar un api Rest hacia una tabla
 
-`MyTableComponentSasegovia1` es un componente web reutilizable desarrollado en Stencil que permite renderizar datos en una tabla HTML a partir de una API REST.
+`component-01-sasegovia` es un componente web reutilizable desarrollado en Stencil que permite renderizar datos en una tabla HTML a partir de una API REST.
 
 ## Características
 
