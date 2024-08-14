@@ -45,6 +45,6 @@ Componente Web en Stencil para renderizar un api Rest hacia una tabla
 
 ## USO
 - Una vez instalado y configurado, puedes utilizar tu componente en un proyecto HTML o en un framework que soporte componentes web.
-    ```bash
+    ```html
         <my-table-component-sasegovia1 api-url="https://api.example.com/products"></my-table-component-sasegovia1>
     ```
