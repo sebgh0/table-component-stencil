@@ -1,6 +1,6 @@
 {
   "name": "componente-01-sasegovia",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -46,5 +46,6 @@
     "jest-cli": "^29.7.0",
     "puppeteer": "^21.9.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "Segovia M. Sebastian"
 }
